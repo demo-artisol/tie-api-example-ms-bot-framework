@@ -104,7 +104,7 @@ class MyBot {
         channel: 'botframework-' + message.channelId,
         userId: turnContext.activity.recipient.id,
         userName: turnContext.activity.recipient.name,
-        aadObjectId: turnContext.activity.recipient.team || ''
+        aadObjectId: turnContext.activity.recipient.aadObjectId || ''
       }
 
       if (message.attachments) {
