@@ -102,9 +102,9 @@ class MyBot {
       let inputDetails = {
         text: messageText,
         channel: 'botframework-' + message.channelId,
-        userId: turnContext.activity.recipient.id,
-        userName: turnContext.activity.recipient.name,
-        aadObjectId: turnContext.activity.recipient.aadObjectId || ''
+        userId: turnContext.activity.from.id,
+        userName: turnContext.activity.from.name,
+        aadObjectId: turnContext.activity.from.aadObjectId || ''
       }
 
       if (message.attachments) {
